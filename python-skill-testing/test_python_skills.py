@@ -1,8 +1,8 @@
 length1 = int(input("første sidelængde: "))
 length2 = int(input("anden sidelængde: "))
 
-#Beregn areal af firkant
-areal = length1 * length2 
+# Beregn areal af firkant
+areal = length1 * length2
 
 print(f"Arealet af firkanten er {areal} i cm")
 

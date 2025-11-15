@@ -1,4 +1,4 @@
-#Validate user input:
+# Validate user input:
 
 username = input("Skriv det brugernavn: ")
 

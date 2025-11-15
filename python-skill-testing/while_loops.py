@@ -1,14 +1,16 @@
-#While loops er et loop som ekseverer kode imens (while) en condition/krav forbliver sand
+# While loops er et loop som ekseverer kode imens (while) en condition/krav forbliver sand
 
-#Eksempel, gentager "skriv dit navn" indtil det krav opfyldes hvor koden så eksekverer videre til print.
+# Eksempel, gentager "skriv dit navn" indtil det krav opfyldes hvor koden så eksekverer videre til print.
+import math
 name = input("Skriv dit navn: ")
 
 while name == "":
-    name = input("Skriv dit navn: ") #Husk en måde at slippe ud af loopet, så det ikke blive infinit
+    # Husk en måde at slippe ud af loopet, så det ikke blive infinit
+    name = input("Skriv dit navn: ")
 
-print (f"Hej {name}")
+print(f"Hej {name}")
 
-#Eksempel
+# Eksempel
 age = int(input("Hvor gammel er du: "))
 
 while age < 0:
@@ -17,18 +19,17 @@ while age < 0:
 
 print(f"hej {name}, du er {age} år gammel")
 
-#Eksempel hvor vi beregner renter med et while-loop:
+# Eksempel hvor vi beregner renter med et while-loop:
 
-import math
 
-#variabler
+# variabler
 final_amount = 0
 initial_balance = 0
 interest_rate = 0
 periods_elapsed = 0
 times_of_compounded_interest_per_year = 0
 
-#Funktionen
+# Funktionen
 while initial_balance <= 0:
     initial_balance = float(input("Enter your initial balance: "))
     if initial_balance <= 0:
@@ -43,10 +44,12 @@ while periods_elapsed <= 0:
         print("Perioden som er gået kan ikke være 0 eller negativ, indtast en ny")
 
 while times_of_compounded_interest_per_year <= 0:
-    times_of_compounded_interest_per_year = float(input("Enter compound interest per year: "))
+    times_of_compounded_interest_per_year = float(
+        input("Enter compound interest per year: "))
     if times_of_compounded_interest_per_year <= 0:
         print("Perioden kan ikke være 0 eller negativ, indtast en ny.")
 
-final_amount = initial_balance*(1 + interest_rate/(times_of_compounded_interest_per_year))**(times_of_compounded_interest_per_year*periods_elapsed)
+final_amount = initial_balance*(1 + interest_rate/(times_of_compounded_interest_per_year)
+                                )**(times_of_compounded_interest_per_year*periods_elapsed)
 
 print(f"Hej {name} du er {age}, og vil have en slutmængde på {final_amount}")
